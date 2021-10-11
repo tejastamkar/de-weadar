@@ -5,7 +5,11 @@ import App from "./App";
 import NavBar from "./Nav";
 
 function Main() {
-  return <App />;
+  return (
+    <>
+      <App />
+    </>
+  );
 }
 function Nav() {
   return <NavBar />;
