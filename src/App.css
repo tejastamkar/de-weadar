@@ -1,9 +1,4 @@
-*{
-  background-color: rgb(166, 255, 255);
-
-}
-
-.head , .sub{ 
+h1 , h3{ 
    text-align: center;
-   color: black;
 }
+
