@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
+import "./Switcher.scss";
+import { Switcher } from "./switcher";
 import NavBar from "./Nav";
 import App from "./App";
 import { ThemeProvider } from "styled-components";
@@ -18,9 +20,9 @@ function Main() {
   const sTheme = Theme();
 
   return (
-    <ThemeProvider theme={sTheme.theme === "light" ? lightTheme : darkTheme}>
+    <ThemeProvider  theme={sTheme.theme === "light" ? lightTheme : darkTheme}>
       <GlobalStyles />
-      <StyledApp>
+      <StyledApp className="style">
         <Nav id="nav">
           <NavBar />
           <Button
@@ -30,6 +32,7 @@ function Main() {
           >
             Darkmode
           </Button>
+          <Switcher />
         </Nav>
         <App />
       </StyledApp>

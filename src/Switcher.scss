@@ -1,0 +1,40 @@
+.theme-opt {
+  max-width: 250px;
+  margin: 20px auto 0px auto;
+  text-align: right;
+  margin: 0px -10px 0px 10px;
+  padding: 0px 0px;
+  height: 20px;
+  div {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    margin: 2px 10px;
+    border: 1px solid #fff;
+    display: inline-block;
+    opacity: 0.5;
+    &.active {
+      opacity: 1;
+    }
+  }
+}
+
+.blue {
+  background-color: #00cbff;
+}
+.yellow {
+  background-color: #ffee00;
+}
+.red {
+  background-color: #fe4437;
+}
+.green {
+  background-color: #00ff66;
+}
+.purple {
+  background-color: #e061f8;
+}
+.pink {
+  background-color: #f87ab5;
+}

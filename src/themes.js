@@ -8,7 +8,12 @@ export const StyledApp = styled.div`
 export const lightTheme = {
   body: "#E8FAFF",
   fontColor: "#000",
-  
+  nav :{ 
+    "id":"nav",
+    "background": "#000",
+    "color":"#fff",
+  }
+
 };
 
 export const darkTheme = {

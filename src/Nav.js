@@ -3,11 +3,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Nav } from "react-bootstrap";
 import "./index.css";
 
-
 function NavBar(myTheme, mysetTheme) {
   return (
     <>
-      <Nav variant="" id="nav" defaultActiveKey="/home">
+      <Nav variant="" defaultActiveKey="/home">
         <Nav.Item>
           <Nav.Link href="/home" id="mynav-items">
             Home
