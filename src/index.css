@@ -13,7 +13,7 @@ code {
 }
 #nav {
   background: #c3f3ed;
-  width: fit-content;
+  width: 85%;
   border-radius: 10px;
   padding: 5px 10px 4px 10px;
   margin: 4% auto 0% auto;
@@ -28,7 +28,7 @@ code {
 }
 #darkmode {
   /* margin: auto 0% auto 25%; */
-  margin: 25px 10px 10px 10px ;
+  margin: 50px 10px 10px 10px ;
   font-size: 10px;
 }
 

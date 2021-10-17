@@ -6,13 +6,15 @@ export const StyledApp = styled.div`
 `;
 
 export const lightTheme = {
-  body: "#fff",
+  body: "#E8FAFF",
   fontColor: "#000",
+  
 };
 
 export const darkTheme = {
   body: "#000",
   fontColor: "#fff",
+
 };
 
 export const GlobalStyles = createGlobalStyle`

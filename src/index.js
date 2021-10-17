@@ -28,7 +28,7 @@ function Main() {
             id="darkmode"
             onClick={() => themeToggler(sTheme.theme, sTheme.setTheme)}
           >
-            Primary
+            Darkmode
           </Button>
         </Nav>
         <App />
