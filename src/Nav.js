@@ -1,25 +1,29 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Button, Navbar, Container, Nav } from "react-bootstrap";
-import { Theme, themeToggler } from "./themes";
+import { Nav } from "react-bootstrap";
+import "./index.css";
 
-function NavBar() {
+
+function NavBar(myTheme, mysetTheme) {
   return (
     <>
-      <Navbar bg="dark" variant="dark">
-        <Container>
-          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-          </Nav>
-        </Container>
-
-        <Navbar>
-          <Button variant="outline-primary">Primary</Button>
-        </Navbar>
-      </Navbar>
+      <Nav variant="" id="nav" defaultActiveKey="/home">
+        <Nav.Item>
+          <Nav.Link href="/home" id="mynav-items">
+            Home
+          </Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link eventKey="link-1" id="mynav-items">
+            Daily Bulletin
+          </Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link eventKey="link-2" id="mynav-items">
+            About us
+          </Nav.Link>
+        </Nav.Item>
+      </Nav>
     </>
   );
 }
