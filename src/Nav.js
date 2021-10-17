@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Nav } from "react-bootstrap";
 import "./index.css";
 
-function NavBar(myTheme, mysetTheme) {
+function NavBar() {
   return (
     <>
       <Nav variant="" defaultActiveKey="/home">

@@ -11,27 +11,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-#nav {
-  background: #c3f3ed;
-  width: 80%;
-  border-radius: 10px;
-  padding: 5px 10px;
-  margin: 4% auto 0% auto;
-  /* height: fit-content;  */
-}
-
-#mynav-items {
-  color: black;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 20px;
-  padding: auto auto;
-}
-#darkmode {
-  /* margin: auto 0% auto 25%; */
-  margin: 20px 10px 10px 50px;
-  font-size: 10px;
-}
-
-#Aboutus {
-  bottom: 0px;
-}
