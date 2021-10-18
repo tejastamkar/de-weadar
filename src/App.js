@@ -3,10 +3,8 @@ import { Nav } from "react-bootstrap";
 import { Switcher } from "./switcher";
 import NavBar from "./Nav";
 
-function App() {
-  const mtheme = Switcher(),
-    Setmtheme = mtheme.sets;
-  switch (mtheme.colorTheme) {
+function swtichcase(theme) {
+  switch (theme) {
     case "black":
       document.getElementById("main").style.background = "black";
       break;
@@ -29,6 +27,12 @@ function App() {
       document.getElementById("main").style.background = "#e8ffec";
       break;
   }
+}
+
+function App() {
+  const mtheme = Switcher(),
+    Setmtheme = mtheme.sets;
+  swtichcase(mtheme.colorTheme);
   return (
     <div className={`style ${mtheme.colorTheme}`} id="bg">
       <>
