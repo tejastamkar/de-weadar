@@ -8,7 +8,7 @@ function NavBar() {
     <>
       <Nav defaultActiveKey="/home">
         <Nav.Item>
-          <Nav.Link href="/home" id="mynav-items">
+          <Nav.Link href="/" id="mynav-items">
             De WeaDar
           </Nav.Link>
         </Nav.Item>
@@ -22,7 +22,6 @@ function NavBar() {
             About us
           </Nav.Link>
         </Nav.Item>
- 
       </Nav>
     </>
   );
