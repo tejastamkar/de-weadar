@@ -1,9 +1,9 @@
-
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import "./Switcher.scss";
+import * as serviceWorker from './serviceWorker';
 
+import "./Switcher.scss";
 import App from "./App";
 
 function Main() {
@@ -11,3 +11,5 @@ function Main() {
 }
 
 ReactDOM.render(<Main />, document.getElementById("root"));
+serviceWorker.unregister();
+

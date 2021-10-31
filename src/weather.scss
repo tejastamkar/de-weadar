@@ -1,0 +1,129 @@
+// Search box
+.search-box {
+  width: 80%;
+  margin: 5px auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  .search-bar {
+    border: 0px;
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 20px;
+    transition: 0.4s ease;
+  }
+  .search-bar::placeholder {
+    color: black;
+  }
+}
+
+.Mist {
+  background: linear-gradient(rgba(153, 153, 153, 0.5), rgba(99, 99, 99, 0.5)),
+    url(https://i.gifer.com/1PSm.gif);
+  .symbol {
+    content: url(http://openweathermap.org/img/wn/50d@2x.png);
+  }
+}
+.Snow {
+  background: linear-gradient(rgba(153, 153, 153, 0.5), rgba(99, 99, 99, 0.5)),
+    url(https://i.gifer.com/Ooi.gif);
+  .symbol {
+    content: url(http://openweathermap.org/img/wn/13d@2x.png);
+  }
+}
+.Rain {
+  background: linear-gradient(rgba(153, 153, 153, 0.5), rgba(99, 99, 99, 0.5)),
+    url(https://i.gifer.com/6HT.gif);
+  .symbol {
+    content: url(http://openweathermap.org/img/wn/10d@2x.png);
+  }
+}
+.Thunderstorm {
+  background: linear-gradient(rgba(153, 153, 153, 0.5), rgba(99, 99, 99, 0.5)),
+    url(https://i.gifer.com/Pld.gif);
+  .symbol {
+    content: url(http://openweathermap.org/img/wn/11d@2x.png);
+  }
+}
+.Drizzle {
+  background: linear-gradient(rgba(153, 153, 153, 0.5), rgba(99, 99, 99, 0.5)),
+    url(https://i.gifer.com/IxI.gif);
+  .symbol {
+    content: url(http://openweathermap.org/img/wn/09d@2x.png);
+  }
+}
+.Smoke {
+  background: linear-gradient(rgba(153, 153, 153, 0.5), rgba(99, 99, 99, 0.5)),
+    url(https://i.gifer.com/g0e4.gif);
+  .symbol {
+    content: url(http://openweathermap.org/img/wn/50d@2x.png);
+  }
+}
+
+.Haze {
+  background: linear-gradient(rgba(153, 153, 153, 0.5), rgba(99, 99, 99, 0.5)),
+    url(https://i.gifer.com/E18n.gif);
+  .symbol {
+    content: url(http://openweathermap.org/img/wn/50d@2x.png);
+  }
+}
+
+.Clouds {
+  background: linear-gradient(rgba(153, 153, 153, 0.5), rgba(99, 99, 99, 0.5)),
+    url(https://i.gifer.com/XFbw.gif);
+  .symbol {
+    content: url(http://openweathermap.org/img/wn/04d@2x.png);
+  }
+}
+.Clear {
+  background: linear-gradient(rgba(153, 153, 153, 0.5), rgba(99, 99, 99, 0.5)),
+    url(https://i.gifer.com/Ooi.gif);
+  .symbol {
+    content: url(http://openweathermap.org/img/wn/01d@2x.png);
+  }
+}
+.weather-contrainer{
+  background-size: cover;
+  margin: 10px 10px;
+  color: white;
+  width: 98%;
+  padding: 0px 10px;
+  border-radius: 10px;
+}
+.location-box {
+  .location {
+    font-size: 32px;
+    font-weight: 500;
+  }
+  .date {
+    font-size: 25px;
+    text-align: left;
+  }
+}
+
+.weather-box {
+  text-align: left;
+  .temp {
+    font-size: 30px;
+  }
+  .weather {
+    font-size: 48px;
+  }
+}
+
+.loading{
+  text-align: center;
+}
+
+
+// .column {
+//   float: left;
+//   width: 48%;
+// }
+
+// /* Clear floats after the columns */
+// .row:after {
+//   content: "";
+//   display: table;
+//   clear: both;
+// }

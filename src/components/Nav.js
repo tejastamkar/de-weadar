@@ -1,27 +1,28 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Nav } from "react-bootstrap";
-import "./index.css";
+import "../index.css";
 
 function NavBar() {
   return (
     <>
-      <Nav variant="" defaultActiveKey="/home">
+      <Nav defaultActiveKey="/home">
         <Nav.Item>
           <Nav.Link href="/home" id="mynav-items">
-            Home
+            De WeaDar
           </Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link eventKey="link-1" id="mynav-items">
+          <Nav.Link href="#Dailytext" eventKey="link-1" id="mynav-items">
             Daily Bulletin
           </Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link eventKey="link-2" id="mynav-items">
+          <Nav.Link href="#aboutus" eventKey="link-2" id="mynav-items">
             About us
           </Nav.Link>
         </Nav.Item>
+ 
       </Nav>
     </>
   );
