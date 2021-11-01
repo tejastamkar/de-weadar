@@ -2,7 +2,6 @@ import React from "react";
 import "./aboutus.css";
 import gif from "./imageone.gif";
 
-
 export function AboutUs() {
   return (
     <div>
@@ -13,7 +12,7 @@ export function AboutUs() {
               <h1>About Us</h1>
             </div>
             <div className="content">
-              <h3>Weather App</h3>
+              <h3>De WeaDar</h3>
               <p>
                 This Weather App project is to explore the wider exchange and
                 availability of official weather information on the Internet.
