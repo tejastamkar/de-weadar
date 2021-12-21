@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Navbar, Container } from "react-bootstrap";
+import { Navbar, Container, Button } from "react-bootstrap";
 import { Switcher } from "./switcher";
 import NavBar from "./components/Nav";
 import Weather from "./weather";
@@ -49,7 +49,7 @@ function App() {
       setLoading(false);
     }, 4000);
   }, []);
-  
+
   var color = "#000";
   if (mtheme.colorTheme === "black") {
     color = "#fff";
@@ -81,9 +81,14 @@ function App() {
             <Setmtheme />
           </Navbar>
           <Weather />
-          <h1 className="Dailytxt" id="Dailytext">
-            DailyBulletin
-          </h1>
+          <div style={{ flex: 1, flexDirection: "row" }}>
+            <h1 className="Dailytxt" id="Dailytext">
+              DailyBulletin
+            </h1>
+            <Button className="DailyBtn" variant="outline-primary">
+              View All
+            </Button>
+          </div>
           <DailyBulletin />
           <AboutUs />
         </>

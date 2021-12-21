@@ -4,7 +4,14 @@ import NewsArticle from "./NewsArticle";
 
 function News(props) {
   // const { data } = useContext(NewsContext);
-  const data = NewData;
+  const sortdata = NewData;
+  var data = [];
+  sortdata.forEach((element) => {
+    if (element.id < 7) {
+      data.push(element);
+    }
+  });
+  console.log(data);
   return (
     <div className="all__news">
       {data
