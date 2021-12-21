@@ -13,7 +13,8 @@ function NewsArticle({ data }) {
           </a>
         </span>
         <hr />
-        <div className="news__author">{data.source.name}</div>
+        {/* <div className="news__author">{data.source.name}</div> */}
+        <div className="news__author">{data.name}</div>
       </div>
     </div>
   );
