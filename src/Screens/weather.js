@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { WeatherAnima } from "../components/Loader";
 import "../Styles/weather.scss";
 const api = {
   key: "fae1f05a821e7e782de9f500e76998a4",
@@ -100,8 +101,9 @@ function Weather() {
             <div className="column">{/* <Mymaps /> */}</div>
           </div>
         ) : (
-          <div>
-            <h3 className="loading">Enter City name in the Search Box above</h3>
+          <div className="loading">
+            <h3 className="text">Enter City name in the Search Box above</h3>
+            <WeatherAnima />
           </div>
         )}
       </main>

@@ -1,5 +1,5 @@
 import React from "react";
-
+import { FullCardView } from "../Screens/FullCardView";
 function NewsArticle({ data }) {
   return (
     <div className="news">
@@ -12,8 +12,7 @@ function NewsArticle({ data }) {
             click here
           </a>
         </span>
-        <hr />
-        {/* <div className="news__author">{data.source.name}</div> */}
+        <hr style={{ bottom: 20 }} />
         <div className="news__author">{data.name}</div>
       </div>
     </div>

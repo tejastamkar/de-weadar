@@ -1,6 +1,7 @@
 import React from "react";
 import Lottie from "react-lottie";
 import * as location from "./world-locations.json";
+import * as location1 from "./Weather-Icon.json";
 // import * as success from "../1127-success.json";
 
 export function PreLoader() {
@@ -12,25 +13,23 @@ export function PreLoader() {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
-  //   const [data, setData] = useState([]);
-  //   const [loading, setloading] = useState(undefined);
-  //   const [completed, setcompleted] = useState(undefined);
 
-  //   useEffect(() => {
-  //     setTimeout(() => {
-  //       fetch("https://jsonplaceholder.typicode.com/posts")
-  //         .then((response) => response.json())
-  //         .then((json) => {
-  //           console.log(json);
-  //           setData(json);
-  //           setloading(true);
+  return (
+    <>
+      <Lottie options={defaultOptions} height={200} width={200} />
+    </>
+  );
+}
 
-  //           setTimeout(() => {
-  //             setcompleted(true);
-  //           }, 1000);
-  //         });
-  //     }, 2000);
-  //   }, []);
+export function WeatherAnima() {
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: location1.default,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
 
   return (
     <>
