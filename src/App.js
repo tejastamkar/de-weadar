@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Navbar, Container, Button } from "react-bootstrap";
-import { Switcher } from "./switcher";
+import { Switcher } from "./components/switcher";
 import NavBar from "./components/Nav";
-import Weather from "./weather";
+import Weather from "./Screens/weather";
 import DailyBulletin from "./components/NewsFetch";
-import { AboutUs } from "./aboutus";
+import { AboutUs } from "./Screens/aboutus";
 import { css } from "@emotion/react";
 import HashLoader from "react-spinners/HashLoader";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { PreLoader } from "./components/Loader";
 
 // import * as serviceWorker from './serviceWorker';
 
@@ -42,56 +44,63 @@ function App() {
   const mtheme = Switcher(),
     Setmtheme = mtheme.sets;
   swtichcase(mtheme.colorTheme);
-  const [loading, setLoading] = useState(false);
+
+  const [data, setData] = useState([]);
+  const [loading, setloading] = useState(undefined);
+  const [completed, setcompleted] = useState(undefined);
   useEffect(() => {
-    setLoading(true);
     setTimeout(() => {
-      setLoading(false);
-    }, 4000);
+      fetch("https://jsonplaceholder.typicode.com/posts")
+        .then((response) => response.json())
+        .then((json) => {
+          console.log(json);
+          setData(json);
+          setloading(true);
+
+          setTimeout(() => {
+            setcompleted(true);
+          }, 1000);
+        });
+    }, 2000);
   }, []);
 
-  var color = "#000";
-  if (mtheme.colorTheme === "black") {
-    color = "#fff";
-  } else {
-    color = "#000";
-  }
-
-  const override = css`
-    margin: 20% auto;
-    display: block;
-    border: red;
-  `;
   return (
     <div className={`style ${mtheme.colorTheme}`} id="bg">
-      {loading ? (
-        <HashLoader
-          className="loader"
-          loading={loading}
-          size={170}
-          color={color}
-          css={override}
-        />
-      ) : (
+      {!completed ? (
         <>
+          <PreLoader />
+        </>
+      ) : (
+        <Router>
           <Navbar id="nav">
             <Container>
               <NavBar />
             </Container>
             <Setmtheme />
           </Navbar>
-          <Weather />
-          <div style={{ flex: 1, flexDirection: "row" }}>
+          {/* <Weather /> */}
+          {/* <div style={{ flex: 1, flexDirection: "row" }}>
             <h1 className="Dailytxt" id="Dailytext">
               DailyBulletin
             </h1>
             <Button className="DailyBtn" variant="outline-primary">
               View All
             </Button>
-          </div>
-          <DailyBulletin />
-          <AboutUs />
-        </>
+          </div> */}
+          {/* <DailyBulletin />
+          <AboutUs /> */}
+          <Switch>
+            <Route path="/aboutus">
+              <AboutUs />
+            </Route>
+            <Route path="/DailyBulletin">
+              <DailyBulletin />
+            </Route>
+            <Route path="/">
+              <Weather />
+            </Route>
+          </Switch>
+        </Router>
       )}
     </div>
   );

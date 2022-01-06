@@ -1,5 +1,5 @@
 import React from "react";
-import "./Switcher.scss";
+import "../Styles/Switcher.scss";
 
 export function Switcher() {
   const [colorTheme, setColortheme] = React.useState("blue");

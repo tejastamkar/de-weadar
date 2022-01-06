@@ -13,12 +13,12 @@ function NavBar() {
           </Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link href="#Dailytext" eventKey="link-1" id="mynav-items">
+          <Nav.Link href="/DailyBulletin" eventKey="link-1" id="mynav-items">
             Daily Bulletin
           </Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link href="#aboutus" eventKey="link-2" id="mynav-items">
+          <Nav.Link href="/aboutus" eventKey="link-2" id="mynav-items">
             About us
           </Nav.Link>
         </Nav.Item>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./weather.scss";
+import "../Styles/weather.scss";
 const api = {
   key: "fae1f05a821e7e782de9f500e76998a4",
   base: "https://api.openweathermap.org/data/2.5/",
