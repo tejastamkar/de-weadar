@@ -1,5 +1,5 @@
 import React from "react";
-import { FullCardView } from "../Screens/FullCardView";
+// import { FullCardView } from "../Screens/FullCardView";
 function NewsArticle({ data }) {
   return (
     <div className="news">
