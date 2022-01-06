@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Navbar, Container, Button } from "react-bootstrap";
+import { Navbar, Container } from "react-bootstrap";
 import { Switcher } from "./components/switcher";
 import NavBar from "./components/Nav";
 import Weather from "./Screens/weather";
@@ -42,9 +42,6 @@ function App() {
   const mtheme = Switcher(),
     Setmtheme = mtheme.sets;
   swtichcase(mtheme.colorTheme);
-
-  const [data, setData] = useState([]);
-  const [loading, setloading] = useState(undefined);
   const [completed, setcompleted] = useState(undefined);
   useEffect(() => {
     setTimeout(() => {
@@ -52,16 +49,12 @@ function App() {
         .then((response) => response.json())
         .then((json) => {
           console.log(json);
-          setData(json);
-          setloading(true);
-
           setTimeout(() => {
             setcompleted(true);
           }, 1000);
         });
     }, 2000);
   }, []);
-
   return (
     <div className={`style ${mtheme.colorTheme}`} id="bg">
       {!completed ? (
@@ -76,17 +69,6 @@ function App() {
             </Container>
             <Setmtheme />
           </Navbar>
-          {/* <Weather /> */}
-          {/* <div style={{ flex: 1, flexDirection: "row" }}>
-            <h1 className="Dailytxt" id="Dailytext">
-              DailyBulletin
-            </h1>
-            <Button className="DailyBtn" variant="outline-primary">
-              View All
-            </Button>
-          </div> */}
-          {/* <DailyBulletin />
-          <AboutUs /> */}
           <Switch>
             <Route path="/aboutus">
               <AboutUs />
