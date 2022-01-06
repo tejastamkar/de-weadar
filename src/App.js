@@ -5,9 +5,7 @@ import NavBar from "./components/Nav";
 import Weather from "./Screens/weather";
 import DailyBulletin from "./components/NewsFetch";
 import { AboutUs } from "./Screens/aboutus";
-import { css } from "@emotion/react";
-import HashLoader from "react-spinners/HashLoader";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { PreLoader } from "./components/Loader";
 
 // import * as serviceWorker from './serviceWorker';
