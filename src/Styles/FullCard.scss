@@ -1,0 +1,43 @@
+.Main {
+  // flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.imgcard {
+  margin: 10px 25%;
+  width: 50%;
+  height: 50%;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+}
+
+.Title {
+  //   font-size: 20px;
+  // margin-top: 5%;
+  font-style: bold;
+  margin: 30px 80px 0px 80px;
+  text-align: center;
+}
+.Main {
+  align-self: center;
+  flex: 1;
+}
+.BackBtn {
+  margin: 0px 0px 0px 60px;
+  width: 50px;
+  border-radius: 30px;
+  height: 50px;
+  // position: absolute;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+}
+
+.BackBtnImage {
+  margin: 7px 12px;
+  width: 20px;
+}
+
+.full_desc {
+  font-size: 25px;
+  margin: 10px 70px;
+}

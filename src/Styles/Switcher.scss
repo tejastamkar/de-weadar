@@ -28,6 +28,10 @@
   .content-section .content .button a:hover {
     background-color: #7edcf9;
     color: black;
+    .news__btn {
+      background-color: #10c1f7;
+      color: black;
+    }
   }
   #theme-opt {
     background-color: #e8faff;
@@ -43,7 +47,11 @@
   .news,
   .content-section .content .button a:hover {
     background-color: #0f0c0c;
-    border: 2px solid white;
+    // border: 2px solid white;
+    .news__btn {
+      background-color: #3b3b3b;
+      color: white;
+    }
   }
   #theme-opt {
     background-color: #000000;
@@ -73,6 +81,10 @@
   .content-section .content .button a:hover {
     background-color: #fe96ca;
     color: black;
+    .news__btn {
+      background-color: #fc69c4;
+      color: black;
+    }
   }
   #theme-opt {
     background-color: #ffe8fa;
@@ -88,6 +100,10 @@
   .content-section .content .button a:hover {
     background-color: #f3fb89;
     color: black;
+    .news__btn {
+      background-color: #e9f35b;
+      color: black;
+    }
   }
   #theme-opt {
     background-color: #feffe8;
@@ -103,6 +119,10 @@
   .content-section .content .button a:hover {
     background-color: #7ef986;
     color: black;
+    .news__btn {
+      background-color: #10e01e;
+      color: black;
+    }
   }
   #theme-opt {
     background-color: #e8ffec;
@@ -118,6 +138,10 @@
   .content-section .content .button a:hover {
     background-color: #fbaff6;
     color: black;
+    .news__btn {
+      background-color: #e640da;
+      color: black;
+    }
   }
   #theme-opt {
     background-color: #ffe8fe;

@@ -66,6 +66,16 @@ body {
   border-radius: 10px 10px 0px 0px;
   margin: 0px auto 10px auto;
 }
+.news__btn {
+  width: 70px;
+  height: 30px;
+  margin: 0px 0px 0px 10px;
+  font-size: 12px;
+  color: white;
+  background-color: rgb(0, 0, 190);
+  border-style: none;
+  border-radius: 5px;
+}
 
 .DailyBtn {
   margin: 0px 10px 0px 90%;

@@ -7,6 +7,7 @@ import DailyBulletin from "./components/NewsFetch";
 import { AboutUs } from "./Screens/aboutus";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { PreLoader } from "./components/Loader";
+import { FullCardView } from "./Screens/FullCardView";
 
 // import * as serviceWorker from './serviceWorker';
 
@@ -42,19 +43,20 @@ function App() {
   const mtheme = Switcher(),
     Setmtheme = mtheme.sets;
   swtichcase(mtheme.colorTheme);
-  const [completed, setcompleted] = useState(undefined);
+  const [completed, setcompleted] = useState(false);
   useEffect(() => {
+    // setTimeout(() => {
+    //   fetch("https://jsonplaceholder.typicode.com/posts")
+    //     .then((response) => response.json())
+    //     .then((json) => {
+    //       setTimeout(() => {
+    //         setcompleted(true);
+    //       }, 1000);
+    //     });
     setTimeout(() => {
-      fetch("https://jsonplaceholder.typicode.com/posts")
-        .then((response) => response.json())
-        .then((json) => {
-          console.log(json);
-          setTimeout(() => {
-            setcompleted(true);
-          }, 1000);
-        });
+      setcompleted(true);
     }, 2000);
-  }, []);
+  });
   return (
     <div className={`style ${mtheme.colorTheme}`} id="bg">
       {!completed ? (
@@ -72,6 +74,9 @@ function App() {
           <Switch>
             <Route path="/aboutus">
               <AboutUs />
+            </Route>
+            <Route path="/NewsView/:data">
+              <FullCardView />
             </Route>
             <Route path="/DailyBulletin">
               <DailyBulletin />
