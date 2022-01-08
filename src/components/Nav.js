@@ -8,13 +8,13 @@ function NavBar() {
     <>
       <Nav defaultActiveKey="/home">
         <Nav.Item>
-          <Nav.Link href="/" id="mynav-items">
+          <Nav.Link href="/Home" id="mynav-items">
             De WeaDar
           </Nav.Link>
         </Nav.Item>
         <Nav.Item>
           <Nav.Link href="/DailyBulletin" eventKey="link-1" id="mynav-items">
-            Daily Bulletin
+            Weather Bulletin
           </Nav.Link>
         </Nav.Item>
         <Nav.Item>

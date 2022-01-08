@@ -9,9 +9,9 @@ body {
   margin: 0 auto;
   background: rgb(251, 254, 255);
 }
-.new1 {
+/* .new1 {
   width: 18rem;
-}
+} */
 
 @media only screen and (min-width: 768px) {
   .all__news {
@@ -35,9 +35,10 @@ body {
   max-width: 300px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
   transition: 0.3s;
-  margin: 0px auto 10px auto;
+  margin: 0px auto 20px auto;
+  /* position: relative; */
   border-radius: 10px;
-  /* max-height: 400px; */
+  /* max-height: 600px; */
 }
 .news__title {
   margin-left: 10px;
@@ -54,15 +55,19 @@ body {
   font-size: 15px;
 }
 .news__author {
+  bottom: 5px;
   margin-left: 5px;
 }
 
 .news__url {
   color: blue;
+
   margin-left: 5px;
 }
 .news__urltoimage {
   width: 100%;
+  /* max-width: 300px;
+  max-height: 120px; */
   border-radius: 10px 10px 0px 0px;
   margin: 0px auto 10px auto;
 }
@@ -77,7 +82,7 @@ body {
   border-radius: 5px;
 }
 
-.DailyBtn {
+/* .DailyBtn {
   margin: 0px 10px 0px 90%;
 }
 
@@ -85,4 +90,4 @@ body {
   text-decoration: solid;
   position: absolute;
   margin: 0px 10px 0px 10px;
-}
+} */

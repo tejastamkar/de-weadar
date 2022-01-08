@@ -65,25 +65,27 @@ function App() {
         </>
       ) : (
         <Router>
-          <Navbar id="nav">
-            <Container>
-              <NavBar />
-            </Container>
-            <Setmtheme />
-          </Navbar>
           <Switch>
-            <Route path="/aboutus">
-              <AboutUs />
-            </Route>
             <Route path="/NewsView/:data">
               <FullCardView />
             </Route>
-            <Route path="/DailyBulletin">
-              <DailyBulletin />
-            </Route>
-            <Route path="/">
-              <Weather />
-            </Route>
+            <div>
+              <Navbar id="nav">
+                <Container>
+                  <NavBar />
+                </Container>
+                <Setmtheme />
+              </Navbar>
+              <Route path="/aboutus">
+                <AboutUs />
+              </Route>
+              <Route path="/DailyBulletin">
+                <DailyBulletin />
+              </Route>
+              <Route path="/Home">
+                <Weather />
+              </Route>
+            </div>
           </Switch>
         </Router>
       )}

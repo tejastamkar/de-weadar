@@ -9,10 +9,10 @@ function NewsArticle({ data }) {
       <div className="news__div">
         <h1 className="news__title">{data.title}</h1>
         <p className="news__desc">{data.description}</p>
-        <span>
+        <div>
           <button className='news__btn' title="Click Me" name='news__btn' onClick={() => navigate.push(`/NewsView/${data.id}`)} >Click me</button>
-        </span>
-        <hr style={{ bottom: 20 }} />
+        </div>
+        <hr />
         <div className="news__author">{data.name}</div>
       </div>
     </div>
