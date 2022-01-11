@@ -6,9 +6,9 @@ import "../index.css";
 function NavBar() {
   return (
     <>
-      <Nav defaultActiveKey="/home">
+      <Nav defaultActiveKey="/">
         <Nav.Item>
-          <Nav.Link href="/Home" id="mynav-items">
+          <Nav.Link href="/" id="mynav-items">
             De WeaDar
           </Nav.Link>
         </Nav.Item>

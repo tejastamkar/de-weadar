@@ -1,7 +1,7 @@
 import React from "react";
 import { NewsContextProvider } from "./NewsContext";
 import News from "../Screens/News";
-import "./news.css";
+import "../Styles/news.css";
 function DailyBulletin() {
   return (
     <NewsContextProvider>

@@ -112,7 +112,7 @@ export const NewData = [
       "Prolonged injuries, lack of support and backing during the period between 2018-2020 forced India’s star off-spinner Ravichandran Ashwin to contemplate retirement.",
     url: "https://indianexpress.com/article/sports/cricket/ravichandran-ashwin-india-retirement-consider-comments-7683125/",
     name: "The Indian Express",
-    category: "Cricket",
+    category: "Sport",
   },
   {
     id: 9,

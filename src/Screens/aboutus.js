@@ -1,6 +1,6 @@
 import React from "react";
-import "./aboutus.css";
-import gif from "./imageone.gif";
+import "../Styles/aboutus.css";
+import gif from "../Images/imageone.gif";
 
 export function AboutUs() {
   return (

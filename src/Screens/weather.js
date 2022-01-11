@@ -1,18 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { WeatherAnima } from "../components/Loader";
+import axios from "axios";
+
+
 import "../Styles/weather.scss";
 const api = {
   key: "fae1f05a821e7e782de9f500e76998a4",
-  base: "https://api.openweathermap.org/data/2.5/",
+  base: "https://api.openweathermap.org/data/2.5/weather?",
 };
 
+let i = 0;
 function Weather() {
   const [query, setQuery] = useState("");
   const [weather, setWeather] = useState({});
+  const [latitude, setLatitude] = useState('');
+  const [longitude, setLongitude] = useState('');
+  const [locCountry, setLocCountry] = useState('');
   // https://i.gifer.com/Xst4.gif
   const search = (evt) => {
     if (evt.key === "Enter") {
-      fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
+      fetch(`${api.base}q=${query}&units=metric&APPID=${api.key}`)
         .then((res) => res.json())
         .then((result) => {
           setWeather(result);
@@ -22,6 +29,31 @@ function Weather() {
     }
   };
 
+  const callweather = () => {
+    fetch(`${api.base}q=${locCountry}&units=metric&APPID=${api.key}`)
+      .then((res) => res.json())
+      .then((result) => {
+        setWeather(result);
+        setQuery("");
+        // console.log(result);
+      });
+  };
+
+  useEffect(() => {
+    navigator.geolocation.getCurrentPosition((position) => {
+      setLatitude(position.coords.latitude)
+      setLongitude(position.coords.longitude)
+
+    })
+    i++
+    if (latitude > 0 && longitude > 0 && i === 1) {
+      axios.get(`${api.base}lat=${latitude}&lon=${longitude}&appid=${api.key}`).then((response) => {
+        console.log(response.data)
+        setLocCountry(response.data.name)
+        callweather()
+      })
+    }
+  })
   const dateBuilder = (d) => {
     let months = [
       "January",

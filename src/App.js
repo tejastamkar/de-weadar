@@ -8,8 +8,8 @@ import { AboutUs } from "./Screens/aboutus";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { PreLoader } from "./components/Loader";
 import { FullCardView } from "./Screens/FullCardView";
+import { Error } from "./Screens/Error_page";
 
-// import * as serviceWorker from './serviceWorker';
 
 function swtichcase(theme) {
   switch (theme) {
@@ -56,6 +56,8 @@ function App() {
     setTimeout(() => {
       setcompleted(true);
     }, 2000);
+
+
   });
   return (
     <div className={`style ${mtheme.colorTheme}`} id="bg">
@@ -66,26 +68,45 @@ function App() {
       ) : (
         <Router>
           <Switch>
-            <Route path="/NewsView/:data">
-              <FullCardView />
-            </Route>
-            <div>
-              <Navbar id="nav">
+
+            <Route path="/" exact>
+              <Navbar id="nav" >
                 <Container>
                   <NavBar />
                 </Container>
                 <Setmtheme />
               </Navbar>
-              <Route path="/aboutus">
-                <AboutUs />
+              <Weather />
+            </Route>
+            <Route path="/NewsView/:data">
+              <FullCardView />
+            </Route>
+            <Route exact path="/aboutus" >
+              <Navbar id="nav" >
+                <Container>
+                  <NavBar />
+                </Container>
+                <Setmtheme />
+              </Navbar>
+              <AboutUs />
+            </Route>
+            <Route exact path="/DailyBulletin" >
+              <Navbar id="nav" >
+                <Container>
+                  <NavBar />
+                </Container>
+                <Setmtheme />
+              </Navbar>
+              <DailyBulletin />
+            </Route>
+
+            <React.Fragment>
+              <Route path="*">
+                <Error />
               </Route>
-              <Route path="/DailyBulletin">
-                <DailyBulletin />
-              </Route>
-              <Route path="/Home">
-                <Weather />
-              </Route>
-            </div>
+
+            </React.Fragment>
+
           </Switch>
         </Router>
       )}
