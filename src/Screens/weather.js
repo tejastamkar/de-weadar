@@ -10,15 +10,12 @@ const api = {
 };
 
 let i = 0;
-
-
-
 function Weather() {
   const [query, setQuery] = useState("");
   const [weather, setWeather] = useState({});
   const [latitude, setLatitude] = useState('');
   const [longitude, setLongitude] = useState('');
-  const [locCountry, setLocCountry] = useState('');
+
   // https://i.gifer.com/Xst4.gif
   const search = (evt) => {
     if (evt.key === "Enter") {
@@ -27,19 +24,19 @@ function Weather() {
         .then((result) => {
           setWeather(result);
           setQuery("");
-          // console.log(result);
         });
     }
   };
 
-  const callweather = () => {
-    fetch(`${api.base}q=${locCountry}&units=metric&APPID=${api.key}`)
+  const callweather = ({ location }) => {
+    fetch(`${api.base}q=${location}&units=metric&APPID=${api.key}`)
       .then((res) => res.json())
       .then((result) => {
         setWeather(result);
-        console.log("its works ");
       });
   };
+
+
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition((position) => {
@@ -47,20 +44,11 @@ function Weather() {
       setLongitude(position.coords.longitude)
 
     })
-    // console.log(i)
-    if (latitude > 0 && longitude > 0 && i === 1) {
-      i++
-
+    i++
+    if (latitude > 0 && longitude > 0 && i === 3) {
       axios.get(`${api.base}lat=${latitude}&lon=${longitude}&appid=${api.key}`).then((response) => {
-        console.log(response.data)
-        setLocCountry(response.data.name)
-        // callweather()
-        fetch(`${api.base}q=${locCountry}&units=metric&APPID=${api.key}`)
-          .then((res) => res.json())
-          .then((result) => {
-            setWeather(result);
-            console.log("its works ");
-          });
+        const location = response.data.name
+        callweather({ location })
       })
     }
   })
@@ -84,7 +72,6 @@ function Weather() {
       "Monday",
       "Tuesday",
       "Wednesday",
-
       "Thursday",
       "Friday",
       "Saturday",
