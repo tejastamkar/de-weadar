@@ -3,7 +3,7 @@ import { Navbar, Container } from "react-bootstrap";
 import { Switcher } from "./components/switcher";
 import NavBar from "./components/Nav";
 import Weather from "./Screens/weather";
-import DailyBulletin from "./components/NewsFetch";
+import WeatherBulletin from "./components/NewsFetch";
 import { AboutUs } from "./Screens/aboutus";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { PreLoader } from "./components/Loader";
@@ -97,7 +97,7 @@ function App() {
                 </Container>
                 <Setmtheme />
               </Navbar>
-              <DailyBulletin />
+              <WeatherBulletin />
             </Route>
 
             <React.Fragment>

@@ -10,6 +10,9 @@ const api = {
 };
 
 let i = 0;
+
+
+
 function Weather() {
   const [query, setQuery] = useState("");
   const [weather, setWeather] = useState({});
@@ -34,8 +37,7 @@ function Weather() {
       .then((res) => res.json())
       .then((result) => {
         setWeather(result);
-        setQuery("");
-        // console.log(result);
+        console.log("its works ");
       });
   };
 
@@ -45,12 +47,20 @@ function Weather() {
       setLongitude(position.coords.longitude)
 
     })
-    i++
+    // console.log(i)
     if (latitude > 0 && longitude > 0 && i === 1) {
+      i++
+
       axios.get(`${api.base}lat=${latitude}&lon=${longitude}&appid=${api.key}`).then((response) => {
         console.log(response.data)
         setLocCountry(response.data.name)
-        callweather()
+        // callweather()
+        fetch(`${api.base}q=${locCountry}&units=metric&APPID=${api.key}`)
+          .then((res) => res.json())
+          .then((result) => {
+            setWeather(result);
+            console.log("its works ");
+          });
       })
     }
   })
@@ -74,6 +84,7 @@ function Weather() {
       "Monday",
       "Tuesday",
       "Wednesday",
+
       "Thursday",
       "Friday",
       "Saturday",

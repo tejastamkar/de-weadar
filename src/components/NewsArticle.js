@@ -1,7 +1,7 @@
 import React from "react";
-import { useHistory } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+
 function NewsArticle({ data }) {
-  let navigate = useHistory()
 
   return (
     <div className="news">
@@ -10,10 +10,16 @@ function NewsArticle({ data }) {
         <h1 className="news__title">{data.title}</h1>
         <p className="news__desc">{data.description}</p>
         <div>
-          <button className='news__btn' title="Click Me" name='news__btn' onClick={() => navigate.push(`/NewsView/${data.id}`)} >Click me</button>
+          <Link
+            className='news__btn'
+            to={{
+              pathname: `/NewsView/${data.id}`,
+              state: { data }
+            }}
+          >Click me</Link>
         </div>
-        <hr />
-        <div className="news__author">{data.name}</div>
+
+        <div className="news__author"><hr />{data.name}</div>
       </div>
     </div>
   );
