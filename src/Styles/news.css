@@ -42,6 +42,7 @@ body {
 }
 .news__title {
   margin-left: 10px;
+  height: 80px;
   font-size: 18px;
   font-weight: 900;
 }
@@ -56,6 +57,7 @@ body {
 }
 .news__author {
   position: relative;
+  top: -10px;
   bottom: 0px;
   margin-left: 5px;
   width: 100%;
