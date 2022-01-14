@@ -8,7 +8,7 @@ function NewsArticle({ data }) {
       <img src={data.urlToImage} className="news__urltoimage" alt="newImage" />
       <div className="news__div">
         <h1 className="news__title">{data.title}</h1>
-        <p className="news__desc">{data.description}</p>
+        {/* <p className="news__desc">{data.description}</p> */}
         <div>
           <Link
             className='news__btn'
@@ -18,8 +18,10 @@ function NewsArticle({ data }) {
             }}
           >Click me</Link>
         </div>
+        <hr />
+        <div className="news__author">
+          {data.name}</div>
 
-        <div className="news__author"><hr />{data.name}</div>
       </div>
     </div>
   );
