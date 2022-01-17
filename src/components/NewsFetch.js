@@ -13,7 +13,7 @@ class WeatherBulletin extends React.Component {
   }
   async componentDidMount() {
 
-    const DbCollection = collection(db, "News");
+    const DbCollection = collection(db, "Weather");
     await getDocs(DbCollection).then(async (snapshort) => {
       snapshort.docs.forEach((doc) => {
         this.state.Data.push({ ...doc.data(), id: doc.id });
